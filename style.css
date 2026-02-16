@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #edefee;
     font-family: 'Markazi Text', serif;
@@ -15,7 +19,7 @@ h2 {
     font-size: 2rem;
 }
 
-header > img{
+header > img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -38,6 +42,7 @@ nav ul {
     display: flex;
     gap: 30px;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 
@@ -73,6 +78,7 @@ section {
     margin-top: 20px;
     margin-bottom: 20px;
     gap: 24px 10px;
+    flex-wrap: wrap;
 }
 
 .discount {
@@ -170,4 +176,119 @@ footer img {
 footer div {
     flex: 1;
     text-align: right;
+}
+
+@media (max-width: 900px) {
+    body {
+        margin: 2rem 1.25rem;
+    }
+
+    header > img {
+        height: 130px;
+    }
+
+    nav {
+        padding: 10px 12px;
+    }
+
+    nav ul {
+        gap: 14px;
+    }
+
+    nav a {
+        padding: 9px 12px;
+        font-size: 1rem;
+    }
+
+    section {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    .discount {
+        min-height: 180px;
+        padding: 30px 28px;
+    }
+
+    .discount h1 {
+        font-size: 2.3rem;
+    }
+
+    main article img {
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 1.5rem 1rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    header > img {
+        height: 110px;
+        padding: 16px 28px;
+    }
+
+    nav {
+        border-radius: 12px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 0.95rem;
+    }
+
+    section {
+        gap: 14px;
+    }
+
+    .discount {
+        padding: 24px 20px;
+        min-height: 160px;
+    }
+
+    .discount h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .discount p {
+        font-size: 0.95rem;
+    }
+
+    main article {
+        padding: 16px;
+    }
+
+    article img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    footer div {
+        text-align: left;
+    }
 }
